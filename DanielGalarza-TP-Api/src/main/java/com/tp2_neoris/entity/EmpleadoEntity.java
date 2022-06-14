@@ -20,7 +20,7 @@ public class EmpleadoEntity implements Serializable{
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	@Column(name="Empleado_ID")
-	private Long id;
+	private Long idEmpleado;
 	@Column(name="Nombre", length=50)
 	private String nombre;
 	@Column(name="Apellido", length=50)
@@ -32,10 +32,10 @@ public class EmpleadoEntity implements Serializable{
 	
 	
 	public Long getId() {
-		return id;
+		return idEmpleado;
 	}
 	public void setId(Long id) {
-		this.id = id;
+		this.idEmpleado = id;
 	}
 	public String getNombre() {
 		return nombre;

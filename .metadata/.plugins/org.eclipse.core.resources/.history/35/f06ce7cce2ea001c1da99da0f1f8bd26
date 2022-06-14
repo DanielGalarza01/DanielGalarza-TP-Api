@@ -1,0 +1,29 @@
+package com.tp2_neoris.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
+@JsonSerialize
+@Entity
+public class EmpleadoEntity implements Serializable{
+	
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@Column(name="Empleado_ID")
+	private Long id;
+	@Column(name="Nombre", length=50)
+	private String nombre;
+	@Column(name="Apellido", length=50)
+	private String apellido;
+	@Column(name="DNI", length=50)
+	private String dni;
+	@Column(name="Edad", length=10)
+	private int edad;
+}

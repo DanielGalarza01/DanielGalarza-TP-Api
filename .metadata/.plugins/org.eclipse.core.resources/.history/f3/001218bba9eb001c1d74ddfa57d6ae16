@@ -1,0 +1,14 @@
+package com.tp2_neoris.modelo;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class JornadaLaboralModelo {
+	
+	private String tipo;
+	private LocalDate fecha;
+	private LocalTime horaDeIngreso;
+	private LocalTime horaDeEgreso;
+	
+	
+}

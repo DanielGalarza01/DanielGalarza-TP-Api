@@ -1,0 +1,14 @@
+1655099944674	Delete element
+1655101271946	Rename package 'com.tp2_neoris.modelo'
+1655101321050	Rename type 'Empleado'
+1655101402964	Rename type 'EmpleadoDto'
+1655101433961	Rename package 'com.tp2_neoris.dto'
+1655102482736	Rename type 'Empleado'
+1655177740963	Delete element
+1655180731930	Rename type 'TurnoNormalController'
+1655180856351	Rename type 'TurnoNormalEntity'
+1655180890754	Rename type 'TJornadaLaboralEntity'
+1655180916028	Rename type 'TurnoNormalModelo'
+1655180942580	Rename type 'TurnoNormalRepository'
+1655180957221	Rename type 'TurnoNormalService'
+1655186849968	Rename field 'id'
