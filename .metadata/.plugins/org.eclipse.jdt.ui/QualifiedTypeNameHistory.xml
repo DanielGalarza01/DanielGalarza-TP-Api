@@ -25,7 +25,14 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.service.TipoDeJornadaService"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.repository.TipoDeJornadaRepository"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="com.tp2_neoris.entity.TipoDeJornadaEntity"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="org.hibernate.annotations.ForeignKey"/>
+    <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+    <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+    <fullyQualifiedTypeName name="com.tp2_neoris.entity.TipoDeJornadaEntity"/>
+    <fullyQualifiedTypeName name="com.tp2_neoris.service.JornadaLaboralService"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.tp2_neoris.repository.JornadaLaboralRepository"/>
+    <fullyQualifiedTypeName name="com.tp2_neoris.modelo.JornadaLaboralModelo"/>
 </qualifiedTypeNameHistroy>

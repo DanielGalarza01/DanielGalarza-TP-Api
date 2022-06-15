@@ -9,7 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -17,14 +17,14 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @JsonSerialize
 @Entity
-@Table(name="Jornada Laboral")
+@Table(name="Jornada_Laboral")
 public class JornadaLaboralEntity implements Serializable{
 
 	private static final long serialVersionUID = 2308032431396844994L;
 	
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	@Column(name="JornadaLaboral_ID")
+	@Column(name="JornadaLaboral_ID",nullable = false, insertable=false)
 	private Long idJornadaLaboral;
 	@Column(name="Fecha")
 	private LocalDate fecha;
@@ -32,47 +32,62 @@ public class JornadaLaboralEntity implements Serializable{
 	private LocalTime horaDeIngreso;
 	@Column(name="Hora_de_Egreso")
 	private LocalTime horaDeEgreso;
-	@JoinColumn
-	private Long idEmpleado;
-	@JoinColumn
-	private Long idTipoDeJornada;
 	
+	@ManyToOne
+    private EmpleadoEntity empleadoEntity;
+	
+	@ManyToOne
+	private TipoDeJornadaEntity tipoDeJornadaEntity;
+
 	public Long getIdJornadaLaboral() {
 		return idJornadaLaboral;
 	}
+
 	public void setIdJornadaLaboral(Long idJornadaLaboral) {
 		this.idJornadaLaboral = idJornadaLaboral;
 	}
+
 	public LocalDate getFecha() {
 		return fecha;
 	}
+
 	public void setFecha(LocalDate fecha) {
 		this.fecha = fecha;
 	}
+
 	public LocalTime getHoraDeIngreso() {
 		return horaDeIngreso;
 	}
+
 	public void setHoraDeIngreso(LocalTime horaDeIngreso) {
 		this.horaDeIngreso = horaDeIngreso;
 	}
+
 	public LocalTime getHoraDeEgreso() {
 		return horaDeEgreso;
 	}
+
 	public void setHoraDeEgreso(LocalTime horaDeEgreso) {
 		this.horaDeEgreso = horaDeEgreso;
 	}
-	public Long getIdEmpleado() {
-		return idEmpleado;
+
+	public EmpleadoEntity getEmpleadoEntity() {
+		return empleadoEntity;
 	}
-	public void setIdEmpleado(Long idEmpleado) {
-		this.idEmpleado = idEmpleado;
+
+	public void setEmpleadoEntity(EmpleadoEntity empleadoEntity) {
+		this.empleadoEntity = empleadoEntity;
 	}
-	public Long getIdTipoDeJornada() {
-		return idTipoDeJornada;
+
+	public TipoDeJornadaEntity getTipoDeJornadaEntity() {
+		return tipoDeJornadaEntity;
 	}
-	public void setIdTipoDeJornada(Long idTipoDeJornada) {
-		this.idTipoDeJornada = idTipoDeJornada;
+
+	public void setTipoDeJornadaEntity(TipoDeJornadaEntity tipoDeJornadaEntity) {
+		this.tipoDeJornadaEntity = tipoDeJornadaEntity;
 	}
+	
+	
 	
 	
 }

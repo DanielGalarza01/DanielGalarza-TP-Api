@@ -13,13 +13,13 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @JsonSerialize
 @Entity
-@Table(name="Tipo de Jornada")
+@Table(name="Tipo_de_Jornada")
 public class TipoDeJornadaEntity implements Serializable{
 
 	private static final long serialVersionUID = -8159443146086890282L;
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	@Column(name="Tipo_de_Jornada_ID")
+	@Column(name="Tipo_de_Jornada_ID",nullable = false, insertable=false)
 	private Long idTipoDeJornada;
 	@Column(name="Nombre")
 	private String nombre;

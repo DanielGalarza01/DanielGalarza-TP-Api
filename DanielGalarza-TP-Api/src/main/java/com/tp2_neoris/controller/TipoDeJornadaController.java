@@ -10,7 +10,7 @@ import com.tp2_neoris.modelo.TipoDeJornadaModelo;
 import com.tp2_neoris.service.TipoDeJornadaService;
 
 @RestController
-@RequestMapping(value="/Tipo de jornada")
+@RequestMapping(value="/Tipo_de_jornada")
 public class TipoDeJornadaController {
 
 	@Autowired

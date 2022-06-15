@@ -19,7 +19,7 @@ public class EmpleadoEntity implements Serializable{
 	private static final long serialVersionUID = -3544940705513721993L;
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	@Column(name="Empleado_ID")
+	@Column(name="Empleado_ID",nullable = false, insertable=false)
 	private Long idEmpleado;
 	@Column(name="Nombre", length=50)
 	private String nombre;

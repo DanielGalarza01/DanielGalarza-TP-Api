@@ -10,15 +10,20 @@ import com.tp2_neoris.modelo.EmpleadoModelo;
 import com.tp2_neoris.service.EmpleadoService;
 
 @RestController
-@RequestMapping("/empleado")
+@RequestMapping(value="/empleado")
 public class EmpleadoController {
 	
-	@Autowired
+//	Inyección de dependencia.
+	
+	@Autowired      
 	private EmpleadoService empleadoService;
 	
-	@PostMapping(value="/alta")
-	public String saveEmpleado(@RequestBody EmpleadoModelo empleadoModelo) {
-		empleadoService.saveEmpleado(empleadoModelo); 
+//	Método post para guardar un nuevo empleado utilizando como parámetro el modelo, indicando mediante la etiqueta
+//	@RequestBody, que el cuerpo de la petición debe cumplir con el formato Json.
+
+	@PostMapping(value="/alta") 
+	public String saveEmpleado(@RequestBody EmpleadoModelo empleadoModelo) { 
+		empleadoService.saveEmpleado(empleadoModelo);                      
 		return "Empleado dado de alta con éxito";
 	}
 }
