@@ -1,0 +1,37 @@
+package com.tp2_neoris.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.tp2_neoris.entity.TipoDeJornadaEntity;
+import com.tp2_neoris.modelo.JornadaLaboralModelo;
+import com.tp2_neoris.modelo.TipoDeJornadaModelo;
+import com.tp2_neoris.repository.TipoDeJornadaRepository;
+
+@Service
+public class TipoDeJornadaService {
+	
+	@private JornadaLaboralRepository jornadaLaboralRepository;
+	
+	@Autowired
+	private TipoDeJornadaRepository tipoDeJornadaRepository;
+	
+	@Autowired
+	private TipoDeJornadaEntity tipoDeJornadaEntity;
+
+	public void saveTipoDeJornada(TipoDeJornadaModelo tipoDeJornadaModelo) {
+		tipoDeJornadaRepository.save(this.mapearTipo(tipoDeJornadaModelo));
+	}
+	
+	private TipoDeJornadaEntity mapearTipo(TipoDeJornadaModelo tipoDeJornadaModelo) {
+		TipoDeJornadaEntity tipoDeJornadaEntity = new TipoDeJornadaEntity();
+		tipoDeJornadaEntity.setNombre(tipoDeJornadaModelo.getNombre());
+		return tipoDeJornadaEntity;
+	}
+	
+	public TipoDeJornadaEntity getByNombre(JornadaLaboralModelo jornadaLaboralModelo) {
+		TipoDeJornadaEntity tipoDeJornadaEntity = new TipoDeJornadaEntity();
+		tipoDeJornadaEntity=jornadaLaboralRepository.
+		return tipoDeJornadaEntity;
+	}
+}

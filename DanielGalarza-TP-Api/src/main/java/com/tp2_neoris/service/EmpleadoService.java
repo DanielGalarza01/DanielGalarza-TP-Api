@@ -31,6 +31,10 @@ public class EmpleadoService {
 		empleadoEntity.setEdad(empleadoModelo.getEdad());
 		return empleadoEntity;
 	}
+	
+	public EmpleadoEntity getEmpleadoById(Long id) {
+		return empleadoRepository.getReferenceById(id);
+	}
 }
 
 

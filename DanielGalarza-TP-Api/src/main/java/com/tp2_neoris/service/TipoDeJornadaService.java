@@ -10,8 +10,12 @@ import com.tp2_neoris.repository.TipoDeJornadaRepository;
 @Service
 public class TipoDeJornadaService {
 	
+
+	
 	@Autowired
 	private TipoDeJornadaRepository tipoDeJornadaRepository;
+	
+
 
 	public void saveTipoDeJornada(TipoDeJornadaModelo tipoDeJornadaModelo) {
 		tipoDeJornadaRepository.save(this.mapearTipo(tipoDeJornadaModelo));

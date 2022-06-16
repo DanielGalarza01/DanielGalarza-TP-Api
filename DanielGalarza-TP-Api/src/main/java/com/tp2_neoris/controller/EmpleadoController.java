@@ -26,4 +26,4 @@ public class EmpleadoController {
 		empleadoService.saveEmpleado(empleadoModelo);                      
 		return "Empleado dado de alta con éxito";
 	}
-}
+}	

@@ -17,24 +17,24 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @JsonSerialize
 @Entity
-@Table(name="Jornada_Laboral")
+@Table(name="JORNADA_LABORAL")
 public class JornadaLaboralEntity implements Serializable{
 
 	private static final long serialVersionUID = 2308032431396844994L;
 	
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	@Column(name="JornadaLaboral_ID",nullable = false, insertable=false)
+	@Column(name="JORNADA_LABORAL_ID",nullable = false, insertable=false)
 	private Long idJornadaLaboral;
-	@Column(name="Fecha")
+	@Column(name="FECHA")
 	private LocalDate fecha;
-	@Column(name="Hora_de_Ingreso")
+	@Column(name="HORA_DE_INGRESO")
 	private LocalTime horaDeIngreso;
-	@Column(name="Hora_de_Egreso")
+	@Column(name="HORA_DE_EGRESO")
 	private LocalTime horaDeEgreso;
 	
 	@ManyToOne
-    private EmpleadoEntity empleadoEntity;
+	private EmpleadoEntity empleadoEntity;
 	
 	@ManyToOne
 	private TipoDeJornadaEntity tipoDeJornadaEntity;

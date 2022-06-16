@@ -13,21 +13,21 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @JsonSerialize
 @Entity
-@Table(name="Empleados")
+@Table(name="EMPLEADOS")
 public class EmpleadoEntity implements Serializable{
 
 	private static final long serialVersionUID = -3544940705513721993L;
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	@Column(name="Empleado_ID",nullable = false, insertable=false)
+	@Column(name="EMPLEADO_ID",nullable = false, insertable=false)
 	private Long idEmpleado;
-	@Column(name="Nombre", length=50)
+	@Column(name="NOMBRE", length=50)
 	private String nombre;
-	@Column(name="Apellido", length=50)
+	@Column(name="APELLIDO", length=50)
 	private String apellido;
 	@Column(name="DNI", length=50)
 	private String dni;
-	@Column(name="Edad", length=10)
+	@Column(name="EDAD", length=10)
 	private int edad;
 	
 	
