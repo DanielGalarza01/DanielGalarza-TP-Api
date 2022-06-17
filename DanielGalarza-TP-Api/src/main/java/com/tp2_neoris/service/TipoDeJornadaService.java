@@ -26,4 +26,8 @@ public class TipoDeJornadaService {
 		tipoDeJornadaEntity.setNombre(tipoDeJornadaModelo.getNombre());
 		return tipoDeJornadaEntity;
 	}
+	
+	public TipoDeJornadaEntity getTipoDeJornadaById(Long id) {
+		return tipoDeJornadaRepository.getReferenceById(id);
+	}
 }

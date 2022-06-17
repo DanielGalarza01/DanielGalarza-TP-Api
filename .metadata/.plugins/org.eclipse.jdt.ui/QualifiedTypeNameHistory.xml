@@ -6,7 +6,6 @@
     <fullyQualifiedTypeName name="javax.persistence.Column"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.repository.EmpleadoRepository"/>
-    <fullyQualifiedTypeName name="com.tp2_neoris.service.EmpleadoService"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.modelo.EmpleadoModelo"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.repository.Turnos"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
@@ -32,9 +31,15 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="lombok.Setter"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="com.tp2_neoris.entity.JornadaLaboralEntity"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.entity.EmpleadoEntity"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.repository.TipoDeJornadaRepository"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.entity.TipoDeJornadaEntity"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="com.tp2_neoris.dto.RespuestaDto"/>
+    <fullyQualifiedTypeName name="com.tp2_neoris.service.EmpleadoService"/>
+    <fullyQualifiedTypeName name="com.tp2_neoris.entity.JornadaLaboralEntity"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.repository.JornadaLaboralRepository"/>
 </qualifiedTypeNameHistroy>
