@@ -39,9 +39,11 @@ public class EmpleadoService {
 		return empleadoRepository.getReferenceById(id);
 	}
 	
-	public RespuestaDto listarHorasPorEmpleado() {
+	public RespuestaDto listarHorasPorEmpleado(Long id) {
 		RespuestaDto respuestaDto = new RespuestaDto();
-		//Hasta acá llegué.!!!!!!!!!!!!!!!!!!!!!!
+		EmpleadoEntity empleadoEntity = new EmpleadoEntity();
+		empleadoEntity = this.getEmpleadoById(id);
+		
 		return respuestaDto;
 	}
 	

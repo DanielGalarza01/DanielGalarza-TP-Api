@@ -1,8 +1,0 @@
-package com.tp2_neoris.repository;
-
-import java.time.LocalDate;
-
-public interface Turnos {
-	 LocalDate fecha;
-	
-}

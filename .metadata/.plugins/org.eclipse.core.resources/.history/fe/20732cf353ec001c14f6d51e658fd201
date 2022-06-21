@@ -1,5 +1,0 @@
-spring.jpa.hibernate.ddl-auto=update
-spring.datasource.url=jdbc:mysql://localhost:3306/Neoris_TP2?useUnicode=true&characterEncoding=utf8&createDatabaseIfNotExist=true
-spring.datasource.username=root
-spring.datasource.password=root
-spring.jpa.show-sql=true

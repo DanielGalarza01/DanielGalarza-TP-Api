@@ -8,4 +8,5 @@ import com.tp2_neoris.entity.EmpleadoEntity;
 @Repository
 public interface EmpleadoRepository extends JpaRepository<EmpleadoEntity, Long>{
 
+	
 }
