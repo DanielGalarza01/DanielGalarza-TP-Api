@@ -1,5 +1,7 @@
 package com.tp2_neoris.controller;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,8 +35,7 @@ public class EmpleadoController {
 	
 	@GetMapping(value="/listaDeHorasPorEmpleado/{id}")
 	public @ResponseBody RespuestaDto listarHorasPorEmpleado(@PathVariable("id") Long id ) { 
-		 RespuestaDto respuestaDto = empleadoService.listarHorasPorEmpleado(id);
-		 return respuestaDto;
+		 return empleadoService.listarHorasPorEmpleado(id);
 	}
 }	
 
