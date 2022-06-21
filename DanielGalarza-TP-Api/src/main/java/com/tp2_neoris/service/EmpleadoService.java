@@ -7,6 +7,7 @@ import com.tp2_neoris.dto.RespuestaDto;
 import com.tp2_neoris.entity.EmpleadoEntity;
 import com.tp2_neoris.modelo.EmpleadoModelo;
 import com.tp2_neoris.repository.EmpleadoRepository;
+import com.tp2_neoris.repository.JornadaLaboralRepository;
 
 
 @Service
@@ -16,6 +17,9 @@ public class EmpleadoService {
 
 	@Autowired
 	private EmpleadoRepository empleadoRepository;
+	
+	@Autowired
+	private JornadaLaboralRepository jornadaLaboralRepository;
 	
 
 //	Método saveEmpleado llama al repositorio que se va a encargar mediante su metodo save de guardar,
@@ -39,13 +43,12 @@ public class EmpleadoService {
 		return empleadoRepository.getReferenceById(id);
 	}
 	
-	public RespuestaDto listarHorasPorEmpleado() {
+	public RespuestaDto listarHorasPorEmpleado(Long id) {
 		RespuestaDto respuestaDto = new RespuestaDto();
-		//Hasta acá llegué.!!!!!!!!!!!!!!!!!!!!!!
+		respuestaDto =(RespuestaDto) jornadaLaboralRepository.findHorasByIdEmpleado(id);
 		return respuestaDto;
 	}
 	
 	
 }
-
 
