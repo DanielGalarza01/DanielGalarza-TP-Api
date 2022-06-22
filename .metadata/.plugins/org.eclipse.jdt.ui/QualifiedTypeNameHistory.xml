@@ -37,12 +37,13 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.dto.RespuestaDto"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.service.EmpleadoService"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.entity.JornadaLaboralEntity"/>
-    <fullyQualifiedTypeName name="com.tp2_neoris.repository.JornadaLaboralRepository"/>
     <fullyQualifiedTypeName name="antlr.collections.List"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
+    <fullyQualifiedTypeName name="com.tp2_neoris.repository.JornadaLaboralRepository"/>
+    <fullyQualifiedTypeName name="javax.websocket.server.PathParam"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
 </qualifiedTypeNameHistroy>
