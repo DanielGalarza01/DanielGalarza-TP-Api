@@ -14,7 +14,11 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @JsonSerialize
 @Entity
 @Table(name="JORNADA_LABORAL")
@@ -38,58 +42,6 @@ public class JornadaLaboralEntity implements Serializable{
 	
 	@ManyToOne
 	private TipoDeJornadaEntity tipoDeJornadaEntity;
-
-	public Long getIdJornadaLaboral() {
-		return idJornadaLaboral;
-	}
-
-	public void setIdJornadaLaboral(Long idJornadaLaboral) {
-		this.idJornadaLaboral = idJornadaLaboral;
-	}
-
-	public LocalDate getFecha() {
-		return fecha;
-	}
-
-	public void setFecha(LocalDate fecha) {
-		this.fecha = fecha;
-	}
-
-	public LocalTime getHoraDeIngreso() {
-		return horaDeIngreso;
-	}
-
-	public void setHoraDeIngreso(LocalTime horaDeIngreso) {
-		this.horaDeIngreso = horaDeIngreso;
-	}
-
-	public LocalTime getHoraDeEgreso() {
-		return horaDeEgreso;
-	}
-
-	public void setHoraDeEgreso(LocalTime horaDeEgreso) {
-		this.horaDeEgreso = horaDeEgreso;
-	}
-
-	public EmpleadoEntity getEmpleadoEntity() {
-		return empleadoEntity;
-	}
-
-	public void setEmpleadoEntity(EmpleadoEntity empleadoEntity) {
-		this.empleadoEntity = empleadoEntity;
-	}
-
-	public TipoDeJornadaEntity getTipoDeJornadaEntity() {
-		return tipoDeJornadaEntity;
-	}
-
-	public void setTipoDeJornadaEntity(TipoDeJornadaEntity tipoDeJornadaEntity) {
-		this.tipoDeJornadaEntity = tipoDeJornadaEntity;
-	}
-	
-	
-	
-	
 }
 
 

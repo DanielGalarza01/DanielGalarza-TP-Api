@@ -11,6 +11,11 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 @JsonSerialize
 @Entity
 @Table(name="EMPLEADOS")
@@ -29,38 +34,4 @@ public class EmpleadoEntity implements Serializable{
 	private String dni;
 	@Column(name="EDAD", length=10)
 	private int edad;
-	
-	
-	public Long getId() {
-		return idEmpleado;
-	}
-	public void setId(Long id) {
-		this.idEmpleado = id;
-	}
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	public String getApellido() {
-		return apellido;
-	}
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
-	}
-	public String getDni() {
-		return dni;
-	}
-	public void setDni(String dni) {
-		this.dni = dni;
-	}
-	public int getEdad() {
-		return edad;
-	}
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
-	
-	
 }

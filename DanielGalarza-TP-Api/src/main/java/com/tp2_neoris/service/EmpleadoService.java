@@ -45,7 +45,9 @@ public class EmpleadoService {
 	
 	public RespuestaDto listarHorasPorEmpleado(Long id) {
 		RespuestaDto respuestaDto = new RespuestaDto();
-		respuestaDto =(RespuestaDto) jornadaLaboralRepository.findHorasByIdEmpleado(id);
+		respuestaDto.setCodigo(200);
+		respuestaDto.setMensaje("data enviada correctamente");
+		respuestaDto.setData(jornadaLaboralRepository.findHorasByIdEmpleado(id));
 		return respuestaDto;
 	}
 	

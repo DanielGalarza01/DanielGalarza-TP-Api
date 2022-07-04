@@ -11,6 +11,11 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 @JsonSerialize
 @Entity
 @Table(name="TIPO_DE_JORNADA")
@@ -23,20 +28,4 @@ public class TipoDeJornadaEntity implements Serializable{
 	private Long idTipoDeJornada;
 	@Column(name="NOMBRE")
 	private String nombre;
-	
-	
-	public Long getIdTipoDeJornada() {
-		return idTipoDeJornada;
-	}
-	public void setIdTipoDeJornada(Long idTipoDeJornada) {
-		this.idTipoDeJornada = idTipoDeJornada;
-	}
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-
 }
