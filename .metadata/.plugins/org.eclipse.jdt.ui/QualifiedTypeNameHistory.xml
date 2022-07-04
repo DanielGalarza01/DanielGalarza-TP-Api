@@ -29,7 +29,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.modelo.JornadaLaboralModelo"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
-    <fullyQualifiedTypeName name="lombok.Setter"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.entity.EmpleadoEntity"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.repository.TipoDeJornadaRepository"/>
@@ -46,4 +45,6 @@
     <fullyQualifiedTypeName name="com.tp2_neoris.repository.JornadaLaboralRepository"/>
     <fullyQualifiedTypeName name="javax.websocket.server.PathParam"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
 </qualifiedTypeNameHistroy>
