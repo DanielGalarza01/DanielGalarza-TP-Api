@@ -3,6 +3,8 @@ package com.tp2_neoris.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,14 +30,14 @@ public class EmpleadoController {
 //	@RequestBody, que el cuerpo de la petición debe cumplir con el formato Json.
 
 	@PostMapping(value="/alta") 
-	public String saveEmpleado(@RequestBody EmpleadoModelo empleadoModelo) { 
+	public ResponseEntity<?> saveEmpleado(@RequestBody EmpleadoModelo empleadoModelo) { 
 		empleadoService.saveEmpleado(empleadoModelo);                      
-		return "Empleado dado de alta con éxito";
+		return ResponseEntity.status(HttpStatus.CREATED).body(empleadoService.saveEmpleado(empleadoModelo));
 	}
 	
 	@GetMapping(value="/listaDeHorasPorEmpleado/{id}")
-	public @ResponseBody RespuestaDto listarHorasPorEmpleado(@PathVariable("id") Long id ) { 
-		 return empleadoService.listarHorasPorEmpleado(id);
+	public @ResponseBody RespuestaDto listarHorasPorEmpleado(@PathVariable(value="id") Long idEmpleado ) { 
+		 return empleadoService.listarHorasPorEmpleado(idEmpleado);
 	}
 }	
 

@@ -22,7 +22,6 @@
     <fullyQualifiedTypeName name="com.tp2_neoris.service.TipoDeJornadaService"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.ForeignKey"/>
     <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
-    <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="com.tp2_neoris.service.JornadaLaboralService"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
@@ -47,4 +46,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="lombok.Setter"/>
     <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
 </qualifiedTypeNameHistroy>

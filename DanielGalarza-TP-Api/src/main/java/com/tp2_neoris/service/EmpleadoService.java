@@ -26,8 +26,9 @@ public class EmpleadoService {
 //	en la base de datos una entidad, razón por la cuál se utiliza el método mapearEmpleado, que recibe 
 //	un empleado modelo y devuelve un empleado entidad.
 	
-	public void saveEmpleado(EmpleadoModelo empleadoModelo) {
+	public EmpleadoModelo saveEmpleado(EmpleadoModelo empleadoModelo) {
 		empleadoRepository.save(this.mapearEmpleado(empleadoModelo));
+		return empleadoModelo;
 	}
 	
 	private EmpleadoEntity mapearEmpleado(EmpleadoModelo empleadoModelo) {
@@ -43,11 +44,11 @@ public class EmpleadoService {
 		return empleadoRepository.getReferenceById(id);
 	}
 	
-	public RespuestaDto listarHorasPorEmpleado(Long id) {
+	public RespuestaDto listarHorasPorEmpleado(Long idEmpleado) {
 		RespuestaDto respuestaDto = new RespuestaDto();
 		respuestaDto.setCodigo(200);
 		respuestaDto.setMensaje("data enviada correctamente");
-		respuestaDto.setData(jornadaLaboralRepository.findHorasByIdEmpleado(id));
+		respuestaDto.setData(jornadaLaboralRepository.findHorasByIdEmpleado(idEmpleado));
 		return respuestaDto;
 	}
 	
