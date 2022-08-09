@@ -40,8 +40,8 @@ public class EmpleadoService {
 		return empleadoEntity;
 	}
 	
-	public EmpleadoEntity getEmpleadoById(Long id) {
-		return empleadoRepository.getReferenceById(id);
+	public EmpleadoEntity getEmpleadoById(Long idEmpleado) {
+		return empleadoRepository.getReferenceById(idEmpleado);
 	}
 	
 	public RespuestaDto listarHorasPorEmpleado(Long idEmpleado) {

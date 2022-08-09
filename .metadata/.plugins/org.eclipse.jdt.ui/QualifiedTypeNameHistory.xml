@@ -48,4 +48,5 @@
     <fullyQualifiedTypeName name="lombok.Getter"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
 </qualifiedTypeNameHistroy>

@@ -32,7 +32,7 @@ public class EmpleadoController {
 	@PostMapping(value="/alta") 
 	public ResponseEntity<?> saveEmpleado(@RequestBody EmpleadoModelo empleadoModelo) { 
 		empleadoService.saveEmpleado(empleadoModelo);                      
-		return ResponseEntity.status(HttpStatus.CREATED).body(empleadoService.saveEmpleado(empleadoModelo));
+		return ResponseEntity.status(HttpStatus.CREATED).body(empleadoModelo);        
 	}
 	
 	@GetMapping(value="/listaDeHorasPorEmpleado/{id}")

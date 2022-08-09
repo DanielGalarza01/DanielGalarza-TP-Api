@@ -1,6 +1,8 @@
 package com.tp2_neoris.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,8 +24,8 @@ public class JornadaLaboralController {
 //	la etiqueta @RequestBody, que el cuerpo de la petición debe cumplir con el formato Json.	
 	
 	@PostMapping(value="/cargar_jornada")
-	public String cargarJornada(@RequestBody JornadaLaboralModelo jornadaLaboralModelo) {
+	public ResponseEntity<?> cargarJornada(@RequestBody JornadaLaboralModelo jornadaLaboralModelo) {
 		jornadaLaboralService.saveJornadaLaboral(jornadaLaboralModelo);
-		return "Jornada laboral cargada con exito";
+		return ResponseEntity.status(HttpStatus.CREATED).body(jornadaLaboralModelo);
 	}
 }

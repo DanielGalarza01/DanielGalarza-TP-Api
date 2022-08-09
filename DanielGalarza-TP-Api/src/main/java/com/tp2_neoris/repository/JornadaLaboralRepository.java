@@ -13,6 +13,6 @@ import com.tp2_neoris.entity.JornadaLaboralEntity;
 @Repository
 public interface JornadaLaboralRepository extends JpaRepository<JornadaLaboralEntity, Long> {
 	
-	@Query(value="SELECT * FROM jornada_laboral WHERE empleado_entity_empleado_id= :id", nativeQuery=true)
-	public List<JornadaLaboralEntity> findHorasByIdEmpleado(Long id);
+	@Query(value="SELECT * FROM jornada_laboral WHERE empleado_entity_empleado_id= :idEmpleado", nativeQuery=true)
+	public List<JornadaLaboralEntity> findHorasByIdEmpleado(Long idEmpleado);
 }

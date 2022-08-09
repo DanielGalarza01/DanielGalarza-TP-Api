@@ -1,6 +1,8 @@
 package com.tp2_neoris.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,8 +19,8 @@ public class TipoDeJornadaController {
 	private TipoDeJornadaService tipoDeJornadaService;
 	
 	@PostMapping(value="/alta")
-	public String saveTipoDeJornada(@RequestBody TipoDeJornadaModelo tipoDeJornadaModelo) {
+	public ResponseEntity<?> saveTipoDeJornada(@RequestBody TipoDeJornadaModelo tipoDeJornadaModelo) {
 		tipoDeJornadaService.saveTipoDeJornada(tipoDeJornadaModelo);
-		return "Tipo de jornada dada de alta con exito";
+		return ResponseEntity.status(HttpStatus.CREATED).body(tipoDeJornadaModelo);
 	}
 }
